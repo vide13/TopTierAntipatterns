@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TopTierAP">
+    <output-path>$PROJECT_DIR$/out/artifacts/TopTierAP</output-path>
+    <root id="archive" name="TopTierAP.jar">
+      <element id="module-output" name="TopTierAntiPatterns" />
+      <element id="module-test-output" name="TopTierAntiPatterns" />
+    </root>
+  </artifact>
+</component>
