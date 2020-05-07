@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -57,8 +58,10 @@ class PetManagerTest {
         ArrayList<Pet> newList = petManager.getPetArrayListByType("NormalCatto");
         Assertions.assertTrue(newList.contains(pet3) && newList.contains(pet4));
     }
-    
+
+    /*
     PetManager petManager = new PetManager();
+
 
     @Test void testRemovePet() throws  InterruptedException{
         Pet pet1 = new Cat("Tobias","Munchkin");
@@ -70,10 +73,27 @@ class PetManagerTest {
 
     /**
      * getPetByName
-     */
+
     @Test void testGetPetByName() {
         Pet pet1 = new Cat("Tobias","Munchkin");
         petManager.addPet(pet1);
         Assertions.assertEquals(petManager.getPetByName("Tobias"), pet1);
     }
+    */
+
+    @Test void testRemovePet() throws  InterruptedException{
+        PetManager petManager = new PetManager();
+        Pet pet1 = new Cat("Tobias","Munchkin");
+        petManager.addPet(pet1);
+        petManager.removePet(pet1);
+        Assertions.assertTrue(petManager.getAllPets().isEmpty());
+    }
+
+    @Test void testGetPetByName() {
+        PetManager petManager = new PetManager();
+        Pet pet1 = new Cat("Tobias","Munchkin");
+        petManager.addPet(pet1);
+        Assertions.assertEquals(petManager.getPetByName("Tobias"), pet1);
+    }
+
 }
