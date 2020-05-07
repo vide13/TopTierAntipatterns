@@ -9,5 +9,8 @@
         <module name="TopTierAntiPatterns" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TopTierAntiPatterns (2)" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
